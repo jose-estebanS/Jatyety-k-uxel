@@ -46,13 +46,12 @@
                     app:layout_constraintTop_toBottomOf="parent"
                     app:layout_constraintBottom_toTopOf="parent"
                     android:layout_width="wrap_content" />
-
                 <ImageView
                     android:id="@+id/cabezab"
                     android:layout_width="46dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/cabeza"
-                    android:translationX="158dp"
+                    android:translationX="176dp"
                     android:translationY="0dp"
                     tools:ignore="MissingConstraints"
                     android:alpha="0"/>
@@ -62,7 +61,7 @@
                     android:layout_width="55dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/pecho"
-                    android:translationX="153dp"
+                    android:translationX="173dp"
                     android:translationY="70dp"
                     android:alpha="0"
                     />
@@ -72,7 +71,7 @@
                     android:layout_width="55dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/estomago"
-                    android:translationX="153dp"
+                    android:translationX="169dp"
                     android:translationY="152dp"
                     android:alpha="0"
                     />
@@ -82,7 +81,7 @@
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/cabeza"
-                    android:translationX="105dp"
+                    android:translationX="120dp"
                     android:translationY="276dp"
                     android:alpha="0"
                     />
@@ -92,7 +91,7 @@
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/cabeza"
-                    android:translationX="228dp"
+                    android:translationX="246dp"
                     android:translationY="276dp"
                     android:alpha="0"
                     />
@@ -101,7 +100,7 @@
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/cabeza"
-                    android:translationX="165dp"
+                    android:translationX="180dp"
                     android:translationY="55dp"
                     android:alpha="0"
                     />
@@ -110,7 +109,7 @@
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/cabeza"
-                    android:translationX="150dp"
+                    android:translationX="168dp"
                     android:translationY="545dp"
                     android:alpha="0"
                     />
@@ -120,7 +119,7 @@
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/cabeza"
-                    android:translationX="180dp"
+                    android:translationX="198dp"
                     android:translationY="545dp"
                     android:alpha="0"
                     />
@@ -130,7 +129,7 @@
                     android:layout_width="32dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/brazoderecho"
-                    android:translationX="103dp"
+                    android:translationX="123dp"
                     android:translationY="94dp"
                     android:alpha="0"
                     />
@@ -140,7 +139,7 @@
                     android:layout_width="32dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/brazoderecho"
-                    android:translationX="230dp"
+                    android:translationX="244dp"
                     android:translationY="96dp"
                     android:alpha="0"
                     />
@@ -150,7 +149,7 @@
                     android:layout_width="29dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/antebrazoderecho"
-                    android:translationX="100dp"
+                    android:translationX="117dp"
                     android:translationY="180dp"
                     android:alpha="0"
                     />
@@ -160,7 +159,7 @@
                     android:layout_width="29dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/antebrazoderecho"
-                    android:translationX="230dp"
+                    android:translationX="250dp"
                     android:translationY="180dp"
                     android:alpha="0"
                     />
@@ -170,7 +169,7 @@
                     android:layout_width="37dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/piernaderecha"
-                    android:translationX="142dp"
+                    android:translationX="158dp"
                     android:translationY="235dp"
                     android:alpha="0"
                     />
@@ -180,7 +179,7 @@
                     android:layout_width="37dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/piernaderecha"
-                    android:translationX="187dp"
+                    android:translationX="203dp"
                     android:translationY="235dp"
                     android:alpha="0"
                     />
@@ -190,7 +189,7 @@
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/pantorrilladerecha"
-                    android:translationX="140dp"
+                    android:translationX="156dp"
                     android:translationY="375dp"
                     android:alpha="0"
                     />
@@ -200,10 +199,11 @@
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/pantorrilladerecha"
-                    android:translationX="182dp"
+                    android:translationX="197dp"
                     android:translationY="375dp"
                     android:alpha="0"
                     />
+
 
                 <android.support.constraint.Guideline
                     android:id="@+id/guideline4"
