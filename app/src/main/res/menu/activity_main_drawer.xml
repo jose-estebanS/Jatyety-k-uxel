@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@mipmap/buscador"
+            android:title="Buscador" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@mipmap/modelo"
+            android:title="Modelo" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@mipmap/estrella"
+            android:title="Favoritos" />
+    </group>
+
+    <item android:title="Contáctanos">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@mipmap/informacion"
+                    android:title="Información" />
+                <item android:icon="@drawable/ic_menu_send"
+                    android:id="@+id/nav_developer"
+                    android:title="Desarrolladores"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

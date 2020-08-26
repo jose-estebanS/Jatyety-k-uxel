@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="idiomas">
+        <item>Ch"'"ol del noreste</item>
+        <item>Tsotsil del norte alto</item>
+        <item>Yokot"'"an del este</item>
+    </string-array>
+    <string-array name="valorIdiomas">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

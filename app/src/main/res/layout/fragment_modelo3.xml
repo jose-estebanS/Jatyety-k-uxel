@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BuscadorFragment">
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/flotante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@drawable/hospital"
+        android:tint="#FFFFFF"
+        android:backgroundTint="#2196F3"
+        app:backgroundTint="#2196F3" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideOverlay"
+        android:visibility="visible">
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#EEEEEE">
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="95dp"
+                android:background="#FAFAFA">
+
+                <ImageView
+                    android:id="@+id/modelofrontal"
+                    android:layout_height="600dp"
+                    android:src="@drawable/modeloreal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    android:layout_width="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/head2"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cabeza"
+                    android:translationX="158dp"
+                    android:translationY="0dp"
+                    tools:ignore="MissingConstraints"
+                    android:alpha="0"/>
+
+                <ImageView
+                    android:id="@+id/pecho2"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pecho"
+                    android:translationX="157dp"
+                    android:translationY="80dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/estomago2"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/estomago"
+                    android:translationX="151dp"
+                    android:translationY="152dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/manoderecha"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cabeza"
+                    android:translationX="108dp"
+                    android:translationY="276dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/manoizquierda"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cabeza"
+                    android:translationX="226dp"
+                    android:translationY="276dp"
+                    android:alpha="0"
+                    />
+                <ImageView
+                    android:id="@+id/pene"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cabeza"
+                    android:translationX="158dp"
+                    android:translationY="233dp"
+                    android:alpha="0"
+                    />
+                <ImageView
+                    android:id="@+id/garganta"
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cabeza"
+                    android:translationX="163dp"
+                    android:translationY="60dp"
+                    android:alpha="0"
+                    />
+                <ImageView
+                    android:id="@+id/rodilladerecha"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cabeza"
+                    android:translationX="135dp"
+                    android:translationY="395dp"
+                    android:alpha="0"
+                    />
+                <ImageView
+                    android:id="@+id/rodillaizquierda"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cabeza"
+                    android:translationX="205dp"
+                    android:translationY="395dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/piederecho2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cabeza"
+                    android:translationX="148dp"
+                    android:translationY="545dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/pieizquierdo2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cabeza"
+                    android:translationX="180dp"
+                    android:translationY="545dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/brazoderecho2"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/brazoderecho"
+                    android:translationX="103dp"
+                    android:translationY="94dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/brazoizquierdo2"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/brazoderecho"
+                    android:translationX="228dp"
+                    android:translationY="96dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/antebrazoderecho2"
+                    android:layout_width="29dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/antebrazoderecho"
+                    android:translationX="100dp"
+                    android:translationY="180dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/antebrazoizquierdo2"
+                    android:layout_width="29dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/antebrazoderecho"
+                    android:translationX="230dp"
+                    android:translationY="180dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/piernaderecha2"
+                    android:layout_width="37dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/piernaderecha"
+                    android:translationX="143dp"
+                    android:translationY="235dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/piernaizquierda2"
+                    android:layout_width="37dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/piernaderecha"
+                    android:translationX="187dp"
+                    android:translationY="235dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/pantorrilladerecha2"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pantorrilladerecha"
+                    android:translationX="143dp"
+                    android:translationY="375dp"
+                    android:alpha="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/pantorrillaizquierda2"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pantorrilladerecha"
+                    android:translationX="183dp"
+                    android:translationY="375dp"
+                    android:alpha="0"/>
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="284dp" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="26dp" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="376dp" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="436dp" />
+            </android.support.design.widget.CoordinatorLayout>
+            <Button
+                android:id="@+id/changeModeloUno"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:text="Rotar cuerpo"
+                android:textSize="15dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="20dp"
+                />
+        </android.support.design.widget.CoordinatorLayout>
+    </ScrollView>
+    <!-- TODO: Update blank fragment layout -->
+</android.support.design.widget.CoordinatorLayout>
