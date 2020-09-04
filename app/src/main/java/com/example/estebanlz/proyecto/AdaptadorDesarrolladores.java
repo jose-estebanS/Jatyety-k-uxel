@@ -9,6 +9,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,10 +25,25 @@ public class AdaptadorDesarrolladores extends RecyclerView.Adapter<AdaptadorDesa
     Context contexto;
     Intent emailIntent;
     private static LayoutInflater inflater = null;
-    private String[]desarrolladores = {"José Jesús Esteban Sánchez","José Carlos Medina Zapata","Cristian Ulises Vázquez Hernández","José Ángel Martínez Aguilar","Elizabeth Damas Jimenez","Egla Gómez Álvaro","Anery Suarez Vázquez","Dra. Emma Reyes Cruz","Mtro. Ulises Contreras Castillo","Lic. Elizabeth Parcero Martínez","Lic.Jesús García Guadalupe","Mtro. Inocente Hernández Damián","Edgar Darinel García Gómez","Romeo Juárez López","Luis Daniel Martínez Hernández"};
-    private String[]roles = {"Desarrollador","Diseñador","Diseñador","Marketing","Analista","Traductor","Asesor Académico UT Usumacinta","Directora Académica","Jefe del Departamento de Vinculación Social y Extensión Universitaria","Coordinadora del Centro de Estudios e Investigaciones en Lenguas","Coordinador de la Licenciatura en Lengua y Cultura","Traductor de la Lengua Yokot'an","Traductor de la Lengua Tsotsil","Colaborador de audio","Traductor de la Lengua Ch'ol"};
-    private int[] imagenes = {R.drawable.esteban, R.drawable.zapa, R.drawable.chilanguita, R.drawable.chato, R.drawable.elisa, R.drawable.egla, R.drawable.anery,R.drawable.mujer,R.drawable.hombre,R.drawable.mujer,R.drawable.hombre,R.drawable.docente,R.drawable.edgar,R.drawable.romero,R.drawable.luis};
-    private String[] correos = {"josejesus9811@gmail.com","josecarlos-m12@outlook.com","thecriis1999@gmail.com","angerfisthalo@gmail.com","elizabethdamasjimenez@gmail.com","heylagomez@gmail.com","anerysuarez@hotmail.com","","","","","","","","","","",""};
+    private int i = 0;
+    private String[]desarrolladores = {"","José Jesús Esteban Sánchez","José Carlos Medina Zapata","Cristian Ulises Vázquez Hernández",
+            "José Ángel Martínez Aguilar","Elizabeth Damas Jimenez","Egla Gómez Álvaro","Anery Suarez Vázquez","","Dra. Emma Reyes Cruz",
+            "Mtro. Ulises Contreras Castillo","Lic. Elizabeth Parcero Martínez","","Lic. Jesús García Guadalupe","Mtro. Inocente Hernández Damián",
+            "Edgar Darinel García Gómez","Romeo Juárez López","Luis Daniel Martínez Hernández","Lic. Cynthia Paola de los Santos Ruiz"};
+
+    private String[]roles = {"El equipo desarrollador del apartado técnico del desarrollo tecnológico de la App estuvo a cargo de estudiantes de la Universidad Tecnológica del Usumacinta",
+            "Desarrollador","Diseñador","Diseñador","Marketing","Analista","Traductor","Asesor Académico UT Usumacinta",
+            "Las traducciones a las lenguas ch’ol, variante del Noroeste; tsotsil, variante del Norte Alto; y yokot’an, variante del Centro, se realizaron en colaboración con la Universidad Intercultural del Estado de Tabasco.",
+            "Directora Académica", "Jefe del Departamento de Vinculación Social y Extensión Universitaria","Coordinadora del Centro de Estudios e Investigaciones en Lenguas",
+            "","Coordinador de la Licenciatura en Lengua y Cultura","Traductor de la Lengua Yokot'an","Traductor de la Lengua Tsotsil","Colaborador de audio",
+            "Traductor de la Lengua Ch'ol","PTC de la Licenciatura en Lengua y Cultura"};
+
+    private int[] imagenes = {R.drawable.logout, R.drawable.esteban, R.drawable.zapa, R.drawable.chilanguita, R.drawable.chato, R.drawable.elisa,
+            R.drawable.egla, R.drawable.anery,R.drawable.uiet,R.drawable.mujer,R.drawable.hombre,R.drawable.mujer,R.drawable.mujer,R.drawable.hombre,R.drawable.docente,R.drawable.edgar,
+            R.drawable.romero,R.drawable.luis,R.drawable.mujer};
+
+    private String[] correos = {"","josejesus9811@gmail.com","josecarlos-m12@outlook.com","thecriis1999@gmail.com","angerfisthalo@gmail.com",
+            "elizabethdamasjimenez@gmail.com","heylagomez@gmail.com","anerysuarez@hotmail.com","","","","","","","","","","",""};
     public AdaptadorDesarrolladores(Context contexto) {
         this.contexto = contexto;
     }
@@ -40,16 +56,26 @@ public class AdaptadorDesarrolladores extends RecyclerView.Adapter<AdaptadorDesa
 
     @Override
     public void onBindViewHolder(final ViewHolderSintomas holder, final int position) {
-        if(position == 0){
-            holder.encabezadoUT.setHeight(200);
-        }else{
-            holder.encabezadoUT.setHeight(1);
+        Log.e("Error: ", ""+position);
+        try{
+            if(i == 0 || i == 8){
+                holder.rol.setTextSize(15);
+                holder.fondo.setBackgroundColor(Color.parseColor("#1976d2"));
+                holder.rol.setTextColor(Color.parseColor("#ffffff"));
+                if(i == 8){
+                    holder.rol.setTextSize(14);
+                    holder.fondo.setBackgroundColor(Color.parseColor("#2e7d32"));
+                    holder.rol.setTextColor(Color.parseColor("#ffffff"));
+                }
+            }
+            if(i == 12){
+                holder.fondo.setVisibility(View.INVISIBLE);
+            }
         }
-        if(position == 6){
-            holder.encabezadoUIET.setHeight(200);
-        }else{
-            holder.encabezadoUIET.setHeight(1);
+        catch (Exception s){
+            //Log.e("Explicación",s.getMessage());
         }
+        i++;
         holder.imagen.setImageResource(imagenes[position]);
         holder.rol.setText(roles[position]);
         holder.nombre.setText(desarrolladores[position]);
@@ -75,10 +101,6 @@ public class AdaptadorDesarrolladores extends RecyclerView.Adapter<AdaptadorDesa
             public void onClick(View v) {
                 try
                 {
-                    //holder.fotoDes.setImageResource(imagenes[position]);
-                    //holder.mDialog.setContentView(R.layout.foto_popup);
-                    //holder.mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                    //holder.mDialog.show();
                     onCreateDialog(0, imagenes[position]).show();
                 }
                 catch (Exception E){
@@ -98,17 +120,16 @@ public class AdaptadorDesarrolladores extends RecyclerView.Adapter<AdaptadorDesa
     }
     @Override
     public int getItemCount() {
-        return imagenes.length;
+        return 19;
     }
 
     public class ViewHolderSintomas extends RecyclerView.ViewHolder {
         TextView rol;
         TextView nombre;
         TextView correo;
-        TextView encabezadoUT;
-        TextView encabezadoUIET;
         ImageView imagen;
         LinearLayout desarrollador;
+        LinearLayout fondo;
         Dialog mDialog;
         ImageView fotoDes;
         public ViewHolderSintomas(View itemView) {
@@ -116,10 +137,9 @@ public class AdaptadorDesarrolladores extends RecyclerView.Adapter<AdaptadorDesa
             rol = (TextView) itemView.findViewById(R.id.rolDesarrollador);
             nombre = (TextView) itemView.findViewById(R.id.nombreDesarrollador);
             imagen = (ImageView) itemView.findViewById(R.id.imagenDesarrollador);
-            encabezadoUT = (TextView) itemView.findViewById(R.id.encabezadoUT);
-            encabezadoUIET = (TextView) itemView.findViewById(R.id.encabezadoUIET);
             correo = (TextView) itemView.findViewById(R.id.correo);
             desarrollador = (LinearLayout) itemView.findViewById(R.id.itemdesarrollador);
+            fondo = (LinearLayout) itemView.findViewById(R.id.itemdesarrollador2);
             fotoDes = (ImageView) itemView.findViewById(R.id.fotoDesarroladorPop);
             mDialog = new Dialog(contexto);
         }

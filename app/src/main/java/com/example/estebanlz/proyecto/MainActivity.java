@@ -68,8 +68,8 @@ public class MainActivity extends AppCompatActivity
         android.support.v4.app.FragmentManager fragmentManager=getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.contenedor, new InicioFragment()).commit();
         //UpdateLanguage(2);
-        eliminarDatos();
-        insertDatos();
+        //eliminarDatos();
+        //insertDatos();
     }
     private void insertDatos(){
         try{
