@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity
         fragmentManager.beginTransaction().replace(R.id.contenedor, new InicioFragment()).commit();
         //UpdateLanguage(2);
         //eliminarDatos();
-        //insertDatos();
+        insertDatos();
     }
     private void insertDatos(){
         try{

@@ -25,7 +25,9 @@ public class AdaptadorDesarrolladores extends RecyclerView.Adapter<AdaptadorDesa
     Context contexto;
     Intent emailIntent;
     private static LayoutInflater inflater = null;
-    private int i = 0;
+    private int LAYOUT_UT = 1;
+    private int LAYOUT_DEFAULT = 0;
+    private int LAYOUT_UIET = 2;
     private String[]desarrolladores = {"","José Jesús Esteban Sánchez","José Carlos Medina Zapata","Cristian Ulises Vázquez Hernández",
             "José Ángel Martínez Aguilar","Elizabeth Damas Jimenez","Egla Gómez Álvaro","Anery Suarez Vázquez","","Dra. Emma Reyes Cruz",
             "Mtro. Ulises Contreras Castillo","Lic. Elizabeth Parcero Martínez","","Lic. Jesús García Guadalupe","Mtro. Inocente Hernández Damián",
@@ -44,19 +46,44 @@ public class AdaptadorDesarrolladores extends RecyclerView.Adapter<AdaptadorDesa
 
     private String[] correos = {"","josejesus9811@gmail.com","josecarlos-m12@outlook.com","thecriis1999@gmail.com","angerfisthalo@gmail.com",
             "elizabethdamasjimenez@gmail.com","heylagomez@gmail.com","anerysuarez@hotmail.com","","","","","","","","","","",""};
+
+    ArrayList<DeveloperVO> developers = new RegistrarDeveloper().Desarrollador();
+
     public AdaptadorDesarrolladores(Context contexto) {
         this.contexto = contexto;
     }
 
     @Override
     public ViewHolderSintomas onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_desarrolladores, null, false);
+        View view;
+        if(viewType == LAYOUT_UT){
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_dev_ut, null, false);
+        }
+        else if(viewType == LAYOUT_UIET){
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_dev_uiet, null, false);
+        }
+        else{
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_desarrolladores, null, false);
+        }
         return new ViewHolderSintomas(view);
     }
 
     @Override
+    public int getItemViewType(int position) {
+        if(position == 0){
+            return 1;
+        }
+        else if(position == 8){
+            return 2;
+        }
+        else{
+            return 0;
+        }
+    }
+
+    @Override
     public void onBindViewHolder(final ViewHolderSintomas holder, final int position) {
-        Log.e("Error: ", ""+position);
+        /*Log.e("Error: ", ""+position);
         try{
             if(i == 0 || i == 8){
                 holder.rol.setTextSize(15);
@@ -75,11 +102,21 @@ public class AdaptadorDesarrolladores extends RecyclerView.Adapter<AdaptadorDesa
         catch (Exception s){
             //Log.e("Explicación",s.getMessage());
         }
-        i++;
-        holder.imagen.setImageResource(imagenes[position]);
-        holder.rol.setText(roles[position]);
-        holder.nombre.setText(desarrolladores[position]);
-        holder.correo.setText(correos[position]);
+        i++;*/
+        /*if(position == 0){
+            holder.rol.setTextSize(15);
+            holder.fondo.setBackgroundColor(Color.parseColor("#1976d2"));
+            holder.rol.setTextColor(Color.parseColor("#ffffff"));
+        }
+        if(position == 8){
+            holder.rol.setTextSize(14);
+            holder.fondo.setBackgroundColor(Color.parseColor("#2e7d32"));
+            holder.rol.setTextColor(Color.parseColor("#ffffff"));
+        }*/
+        holder.imagen.setImageResource(developers.get(position).getFoto());
+        holder.rol.setText(developers.get(position).getRol());
+        holder.nombre.setText(developers.get(position).getNombre());
+        holder.correo.setText(developers.get(position).getCorreo());
         holder.desarrollador.setTag(position);
         holder.desarrollador.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,7 +157,7 @@ public class AdaptadorDesarrolladores extends RecyclerView.Adapter<AdaptadorDesa
     }
     @Override
     public int getItemCount() {
-        return 19;
+        return 18;
     }
 
     public class ViewHolderSintomas extends RecyclerView.ViewHolder {
@@ -129,7 +166,7 @@ public class AdaptadorDesarrolladores extends RecyclerView.Adapter<AdaptadorDesa
         TextView correo;
         ImageView imagen;
         LinearLayout desarrollador;
-        LinearLayout fondo;
+        //LinearLayout fondo;
         Dialog mDialog;
         ImageView fotoDes;
         public ViewHolderSintomas(View itemView) {
@@ -139,7 +176,7 @@ public class AdaptadorDesarrolladores extends RecyclerView.Adapter<AdaptadorDesa
             imagen = (ImageView) itemView.findViewById(R.id.imagenDesarrollador);
             correo = (TextView) itemView.findViewById(R.id.correo);
             desarrollador = (LinearLayout) itemView.findViewById(R.id.itemdesarrollador);
-            fondo = (LinearLayout) itemView.findViewById(R.id.itemdesarrollador2);
+            //fondo = (LinearLayout) itemView.findViewById(R.id.itemdesarrollador2);
             fotoDes = (ImageView) itemView.findViewById(R.id.fotoDesarroladorPop);
             mDialog = new Dialog(contexto);
         }
